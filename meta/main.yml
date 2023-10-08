@@ -1,0 +1,27 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: nodejs
+  author: shaneholloman
+  description: Node.js installation for Linux
+  company: "shaneholloman"
+  license: "license (BSD, MIT)"
+  min_ansible_version: "2.10"
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - trusty
+        - xenial
+        - bionic
+  galaxy_tags:
+    - development
+    - web
+    - javascript
+    - js
+    - node
+    - npm
+    - nodejs
