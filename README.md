@@ -1,6 +1,6 @@
 # Ansible Role: Node.js
 
-[![CI](https://github.com/shaneholloman-org/ansible-role-nodejs/actions/workflows/ci.yml/badge.svg)](https://github.com/shaneholloman-org/ansible-role-nodejs/actions/workflows/ci.yml)
+[![CI](https://github.com/shaneholloman/ansible-role-nodejs/actions/workflows/ci.yml/badge.svg)](https://github.com/shaneholloman/ansible-role-nodejs/actions/workflows/ci.yml)
 
 Installs Node.js on RHEL/CentOS or Debian/Ubuntu.
 
@@ -65,7 +65,7 @@ Set a path pointing to a particular `package.json` (e.g. `"/var/www/app/package.
 ```yaml
 nodejs_generate_etc_profile: "true"
 ```
-    
+
 By default the role will create `/etc/profile.d/npm.sh` with exported variables (`PATH`, `NPM_CONFIG_PREFIX`, `NODE_PATH`). If you prefer to avoid generating that file (e.g. you want to set the variables yourself for a non-global install), set it to "false".
 
 ## Dependencies
@@ -97,4 +97,3 @@ MIT / BSD
 ## Author Information
 
 This role was created in 2023
-
