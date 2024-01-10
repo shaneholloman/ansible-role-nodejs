@@ -49,9 +49,6 @@ jobs:
           - distro: debian12
             playbook: converge.yml
 
-          - distro: debian11
-            playbook: playbook-latest.yml
-
     steps:
       - name: Check out the codebase.
         uses: actions/checkout@v4
