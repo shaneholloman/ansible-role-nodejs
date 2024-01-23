@@ -1,4 +1,4 @@
-# Ansible Role: Node.js
+# Ansible Role: `nodejs`
 
 [![CI](https://github.com/shaneholloman/ansible-role-nodejs/actions/workflows/ci.yml/badge.svg)](https://github.com/shaneholloman/ansible-role-nodejs/actions/workflows/ci.yml)
 
@@ -12,37 +12,37 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-```yaml
+```yml
 nodejs_version: "16.x"
 ```
 
 The Node.js version to install. "14.x" is the default and works on most supported OSes. Other versions such as "10.x", "14.x", "18.x", etc. should work on the latest versions of Debian/Ubuntu and RHEL/CentOS.
 
-```yaml
+```yml
 nodejs_install_npm_user: "{{ ansible_ssh_user }}"
 ```
 
 The user for whom the npm packages will be installed can be set here, this defaults to `ansible_user`.
 
-```yaml
+```yml
 npm_config_prefix: "/usr/local/lib/npm"
 ```
 
 The global installation directory. This should be writeable by the `nodejs_install_npm_user`.
 
-```yaml
+```yml
 npm_config_unsafe_perm: "false"
 ```
 
 Set to true to suppress the UID/GID switching when running package scripts. If set explicitly to false, then installing as a non-root user will fail.
 
-```yaml
+```yml
 nodejs_npm_global_packages: []
 ```
 
 A list of npm packages with a `name` and (optional) `version` to be installed globally. For example:
 
-```yaml
+```yml
 nodejs_npm_global_packages:
   # Install a specific version of a package.
   - name: jslint
@@ -56,13 +56,13 @@ nodejs_npm_global_packages:
     state: absent
 ```
 
-```yaml
+```yml
 nodejs_package_json_path: ""
 ```
 
 Set a path pointing to a particular `package.json` (e.g. `"/var/www/app/package.json"`). This will install all of the defined packages globally using Ansible's `npm` module.
 
-```yaml
+```yml
 nodejs_generate_etc_profile: "true"
 ```
 
@@ -74,7 +74,7 @@ None.
 
 ## Example Playbook
 
-```yaml
+```yml
 - hosts: utility
   vars_files:
     - vars/main.yml
@@ -84,7 +84,7 @@ None.
 
 *Inside `vars/main.yml`*:
 
-```yaml
+```yml
 nodejs_npm_global_packages:
   - name: jslint
   - name: node-sass
@@ -92,7 +92,7 @@ nodejs_npm_global_packages:
 
 ## License
 
-MIT / BSD
+Unlicense
 
 ## Author Information
 
